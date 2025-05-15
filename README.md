@@ -2,9 +2,9 @@
 ## Présentation des jeux de données 📊
 
 Pour ce data challenge, nous avons d’abord disposé de trois jeux de données au format CSV :  
-- *cards_data.csv* 🃏, regroupant les informations relatives aux cartes (type, date d’émission, limites, etc.)  
-- *users_data.csv* 👤, contenant les attributs des utilisateurs (âge, genre, localisation, statut)  
-- *transactions_train.csv* 💸, listant les opérations effectuées (montant, date, moyen de paiement, marchand)  
+- *cards_data.csv* , regroupant les informations relatives aux cartes (type, date d’émission, limites, etc.)  
+- *users_data.csv* , contenant les attributs des utilisateurs (âge, genre, localisation, statut)  
+- *transactions_train.csv*, listant les opérations effectuées (montant, date, moyen de paiement, marchand)  
 
 Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons donc procédé à leur fusion (merge) sur les clés communes (ID carte et ID utilisateur) afin de constituer un seul jeu de données unifié, prêt pour l’analyse et le prétraitement. 🚀
 
