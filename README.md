@@ -1,4 +1,17 @@
 # HackatonIBM
+## Présentation des jeux de données 📊
+
+Pour ce data challenge, nous avons d’abord disposé de trois jeux de données au format CSV :  
+- *cards_data.csv* 🃏, regroupant les informations relatives aux cartes (type, date d’émission, limites, etc.)  
+- *users_data.csv* 👤, contenant les attributs des utilisateurs (âge, genre, localisation, statut)  
+- *transactions_train.csv* 💸, listant les opérations effectuées (montant, date, moyen de paiement, marchand)  
+
+Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons donc procédé à leur fusion (merge) sur les clés communes (ID carte et ID utilisateur) afin de constituer un seul jeu de données unifié, prêt pour l’analyse et le prétraitement. 🚀
+
+## Étiquetage de la fraude 🚩
+
+Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* 🗂️.  
+Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 🔍
 # 📊 Résumé des Performances du Modèle LGBM – Détection de Fraude
 
 **🗓️ Date de création** : 15/05/2025 à 10:18:56  
