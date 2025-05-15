@@ -12,7 +12,8 @@ Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons do
 
 Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* 🗂️.  
 Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 🔍
-# 📊 Résumé des Performances du Modèle LGBM – Détection de Fraude
+
+# 📊 Modèle LGBM 
 
 **🔢 Nombre d'instances évaluées** : 21 000  
 **🧠 Algorithme utilisé** : LightGBM (LGBMClassifier)  
@@ -70,7 +71,7 @@ Cette premiere pipeline permet d'avoir les meilleurs compromis entre la précisi
 Voici les performances d'une autre pipeline qui permet d'atteindre un rappel parfait mais une précision faible.
 (peut-être mieux en function de l'usage du modèle)
 
-# 📊 Résumé du Modèle – Arbre de Décision
+# 📊 Decision Tree Classifier
 
 ## 🧪 Détails de l'Expérience
 
