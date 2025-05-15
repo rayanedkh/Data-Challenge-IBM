@@ -81,14 +81,6 @@ Voici les performances d'une autre pipeline qui permet d'atteindre un rappel par
   - *Précision* ✅  
   - *Rappel* 🔍  
 - Comparaison des performances des modèles de base (ex. régression logistique, random forest) avant/après rééchantillonnage  
-- Application d’un *oversampling* avec *SMOTE* pour rééquilibrer les classes et améliorer la détection des fraudes 🌱## Évaluation des modèles 🧪
-
-- Mise en place d’une *cross-validation* stratifiée (k-fold) pour estimer la robustesse des modèles 🔄  
-- Calcul des métriques clés :  
-  - *F1-score* 🎯  
-  - *Précision* ✅  
-  - *Rappel* 🔍  
-- Comparaison des performances des modèles de base (ex. régression logistique, random forest) avant/après rééchantillonnage  
 - Application d’un *oversampling* avec *SMOTE* pour rééquilibrer les classes et améliorer la détection des fraudes 🌱
 
 ## Intégration de Watson 🤖
