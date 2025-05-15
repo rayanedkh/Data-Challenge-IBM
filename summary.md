@@ -7,6 +7,21 @@ Pour ce data challenge, nous avons d’abord disposé de trois jeux de données 
 - *transactions_train.csv*, listant les opérations effectuées (montant, date, moyen de paiement, marchand)  
 
 Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons donc procédé à leur fusion (merge) sur les clés communes (ID carte et ID utilisateur) afin de constituer un seul jeu de données unifié, prêt pour l’analyse et le prétraitement. 🚀
+
+## Étiquetage de la fraude 🚩
+
+Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* 🗂️.  
+Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 🔍
+
+---
+
+## Feature Engineering 🛠️
+
+- Suppression des colonnes inutiles, telles que **cvv** 🔒 (risque de confidentialité) et autres attributs peu informatifs  
+- Application du **One-Hot Encoding** pour les variables catégorielles, transformant chaque modalité en une colonne binaire distincte 🏷️
+
+---
+
 ## Évaluation des modèles 🧪
 
 - Mise en place d’une *cross-validation* stratifiée (k-fold) pour estimer la robustesse des modèles 🔄  
@@ -26,17 +41,6 @@ Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons do
   - Scalabilité immédiate grâce au cloud ☁️  
   - Interface intuitive pour la visualisation des résultats 📈  
   - Sécurité et conformité enterprise-level 🔐
-## Étiquetage de la fraude 🚩
-
-Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* 🗂️.  
-Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 🔍
-
----
-
-## Feature Engineering 🛠️
-
-- Suppression des colonnes inutiles, telles que **cvv** 🔒 (risque de confidentialité) et autres attributs peu informatifs  
-- Application du **One-Hot Encoding** pour les variables catégorielles, transformant chaque modalité en une colonne binaire distincte 🏷️
 
 ---
 
