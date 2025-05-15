@@ -67,3 +67,5 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 - **Surveillance continue** : Mettez en place une surveillance continue des performances du modèle pour détecter toute dérive ou changement dans les données entrantes.
 
 
+📚 Pour en savoir plus :  
+👉 [LightGBM Model evaluation metrics - GeeksforGeeks](https://www.geeksforgeeks.org/lightgbm-model-evaluation-metrics/)
