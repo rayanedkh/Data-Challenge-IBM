@@ -13,13 +13,6 @@ Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons do
 Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* 🗂️.  
 Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 🔍
 
-# 📊 Modèle LGBM 
-
-**🔢 Nombre d'instances évaluées** : 21 000  
-**🧠 Algorithme utilisé** : LightGBM (LGBMClassifier)  
-**🧮 Nombre de caractéristiques** : 46  
-**🎯 Colonne cible** : `target` (1 = fraude, 0 = non-fraude)
-
 ---
 
 ## Feature Engineering 🛠️
@@ -28,6 +21,15 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 - Application du **One-Hot Encoding** pour les variables catégorielles, transformant chaque modalité en une colonne binaire distincte 🏷️
 
 ---
+
+# 📊 Modèle LGBM 
+
+**🔢 Nombre d'instances évaluées** : 21 000  
+**🧠 Algorithme utilisé** : LightGBM (LGBMClassifier)  
+**🧮 Nombre de caractéristiques** : 46  
+**🎯 Colonne cible** : `target` (1 = fraude, 0 = non-fraude)
+
+
 
 ## ✅ Scores d'Évaluation
 
