@@ -7,7 +7,25 @@ Pour ce data challenge, nous avons d’abord disposé de trois jeux de données 
 - *transactions_train.csv*, listant les opérations effectuées (montant, date, moyen de paiement, marchand)  
 
 Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons donc procédé à leur fusion (merge) sur les clés communes (ID carte et ID utilisateur) afin de constituer un seul jeu de données unifié, prêt pour l’analyse et le prétraitement. 🚀
+## Évaluation des modèles 🧪
 
+- Mise en place d’une *cross-validation* stratifiée (k-fold) pour estimer la robustesse des modèles 🔄  
+- Calcul des métriques clés :  
+  - *F1-score* 🎯  
+  - *Précision* ✅  
+  - *Rappel* 🔍  
+- Comparaison des performances des modèles de base (ex. régression logistique, random forest) avant/après rééchantillonnage  
+- Application d’un *oversampling* avec *SMOTE* pour rééquilibrer les classes et améliorer la détection des fraudes 🌱
+
+## Intégration de Watson 🤖
+
+- Après avoir comparé plusieurs approches, nous avons choisi d’utiliser *IBM Watson* pour la mise en production de notre modèle  
+- Déploiement via *Watson Studio / Watson Machine Learning* pour profiter d’une API de scoring en temps réel 🌐  
+- Automatisation du pipeline de données et du scoring, avec monitoring intégré des performances et gestion des déploiements 🚀  
+- Avantages :  
+  - Scalabilité immédiate grâce au cloud ☁️  
+  - Interface intuitive pour la visualisation des résultats 📈  
+  - Sécurité et conformité enterprise-level 🔐
 ## Étiquetage de la fraude 🚩
 
 Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* 🗂️.  
@@ -72,26 +90,6 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 Cette premiere pipeline permet d'avoir les meilleurs compromis entre la précision et le rappel, cependant étant donné le problème il peut être pertinent de se concentrer sur le rappel.
 Voici les performances d'une autre pipeline qui permet d'atteindre un rappel parfait mais une précision faible.
 (peut-être mieux en function de l'usage du modèle)
-
-## Évaluation des modèles 🧪
-
-- Mise en place d’une *cross-validation* stratifiée (k-fold) pour estimer la robustesse des modèles 🔄  
-- Calcul des métriques clés :  
-  - *F1-score* 🎯  
-  - *Précision* ✅  
-  - *Rappel* 🔍  
-- Comparaison des performances des modèles de base (ex. régression logistique, random forest) avant/après rééchantillonnage  
-- Application d’un *oversampling* avec *SMOTE* pour rééquilibrer les classes et améliorer la détection des fraudes 🌱
-
-## Intégration de Watson 🤖
-
-- Après avoir comparé plusieurs approches, nous avons choisi d’utiliser *IBM Watson* pour la mise en production de notre modèle  
-- Déploiement via *Watson Studio / Watson Machine Learning* pour profiter d’une API de scoring en temps réel 🌐  
-- Automatisation du pipeline de données et du scoring, avec monitoring intégré des performances et gestion des déploiements 🚀  
-- Avantages :  
-  - Scalabilité immédiate grâce au cloud ☁️  
-  - Interface intuitive pour la visualisation des résultats 📈  
-  - Sécurité et conformité enterprise-level 🔐
 
 # 📊 Decision Tree Classifier
 
