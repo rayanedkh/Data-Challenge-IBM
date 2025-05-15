@@ -21,6 +21,13 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 
 ---
 
+## Feature Engineering 🛠️
+
+- Suppression des colonnes inutiles, telles que **cvv** 🔒 (risque de confidentialité) et autres attributs peu informatifs  
+- Application du **One-Hot Encoding** pour les variables catégorielles, transformant chaque modalité en une colonne binaire distincte 🏷️
+
+---
+
 ## ✅ Scores d'Évaluation
 
 | **Métrique**               | **Holdout** | **Validation Croisée** |
