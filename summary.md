@@ -72,7 +72,16 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 Cette premiere pipeline permet d'avoir les meilleurs compromis entre la précision et le rappel, cependant étant donné le problème il peut être pertinent de se concentrer sur le rappel.
 Voici les performances d'une autre pipeline qui permet d'atteindre un rappel parfait mais une précision faible.
 (peut-être mieux en function de l'usage du modèle)
+## Intégration de Watson 🤖
 
+- Après avoir comparé plusieurs approches, nous avons choisi d’utiliser *IBM Watson* pour la mise en production de notre modèle  
+- Déploiement via *Watson Studio / Watson Machine Learning* pour profiter d’une API de scoring en temps réel 🌐  
+- Automatisation du pipeline de données et du scoring, avec monitoring intégré des performances et gestion des déploiements 🚀  
+- Avantages :  
+  - Scalabilité immédiate grâce au cloud ☁️  
+  - Interface intuitive pour la visualisation des résultats 📈  
+  - Sécurité et conformité enterprise-level 🔐
+  
 # 📊 Decision Tree Classifier
 
 ## 🧪 Détails de l'Expérience
