@@ -70,64 +70,64 @@ Cette premiere pipeline permet d'avoir les meilleurs compromis entre la précisi
 Voici les performances d'une autre pipeline qui permet d'atteindre un rappel parfait mais une précision faible.
 (peut-être mieux en function de l'usage du modèle)
 
-# 📊 Model Summary – Decision Tree Classifier
+# 📊 Résumé du Modèle – Arbre de Décision
 
-## 🧪 Experiment Details
+## 🧪 Détails de l'Expérience
 
-- **Prediction column**: `target`
-- **Algorithm**: Decision Tree Classifier
-- **Number of features**: 76
-- **Evaluation instances**: 21,000
-
-
----
-
-## 📈 Evaluation Metrics
-
-### ✅ Holdout Metrics (single train/test split)
-
-| Metric              | Value  |
-|---------------------|--------|
-| Accuracy            | 0.860  |
-| Area under ROC      | 0.936  |
-| Precision           | 0.010  |
-| Recall              | 1.000  |
-| F1 Score            | 0.021  |
-| Average Precision   | 0.011  |
-| Log Loss            | 0.307  |
+- **Colonne prédite** : `target`
+- **Algorithme** : Arbre de Décision (Decision Tree Classifier)
+- **Nombre de caractéristiques** : 76
+- **Instances évaluées** : 21 000
+- **Date de création** : 15/05/2025, 10:14:58
 
 ---
 
-### 🔁 Cross-Validation Metrics
+## 📈 Métriques d'Évaluation
 
-| Metric              | Value  |
-|---------------------|--------|
-| Accuracy            | 0.865  |
-| Area under ROC      | 0.914  |
-| Precision           | 0.011  |
-| Recall              | 0.954  |
-| F1 Score            | 0.021  |
-| Average Precision   | 0.011  |
-| Log Loss            | 0.299  |
+### ✅ Métriques Holdout (séparation entraînement/test classique)
 
----
-
-## 📉 Confusion Matrix Summary (Holdout)
-
-| Actual \ Predicted | 1 (Fraud) | 0 (Non-fraud) | % Correct |
-|--------------------|-----------|---------------|-----------|
-| 1 (Fraud)          | 31        | 0             | 100.0%    |
-| 0 (Non-fraud)      | 2937      | 18,032        | 86.0%     |
-
-- **Class 1 (Fraud)** Recall: **100%**
-- **Very low precision (1%)**: The model detects all fraud cases, but with many false positives.
+| Métrique             | Valeur |
+|----------------------|--------|
+| Exactitude (Accuracy) | 0.860  |
+| AUC (ROC)            | 0.936  |
+| Précision            | 0.010  |
+| Rappel (Recall)      | 1.000  |
+| Score F1             | 0.021  |
+| Précision Moyenne    | 0.011  |
+| Log Loss             | 0.307  |
 
 ---
 
-## 📝 Interpretation
+### 🔁 Métriques en Validation Croisée
 
-- The Decision Tree model **detects all fraud cases (100% recall)**, which is important in fraud detection.
-- However, the **precision is extremely low (1%)**, meaning it misclassifies many normal transactions as fraud.
-- This leads to a **very high number of false positives**, which may cause operational inefficiency or alert fatigue.
+| Métrique             | Valeur |
+|----------------------|--------|
+| Exactitude (Accuracy) | 0.865  |
+| AUC (ROC)            | 0.914  |
+| Précision            | 0.011  |
+| Rappel (Recall)      | 0.954  |
+| Score F1             | 0.021  |
+| Précision Moyenne    | 0.011  |
+| Log Loss             | 0.299  |
 
-👉 Consider using more advanced models (like LGBM or Random Forest) or adding cost-sensitive learning to improve the precision.
+---
+
+## 📉 Résumé de la Matrice de Confusion (Holdout)
+
+| Réel \ Prédit        | 1 (Fraude) | 0 (Non-fraude) | % Correct |
+|----------------------|------------|----------------|-----------|
+| 1 (Fraude)           | 31         | 0              | 100.0%    |
+| 0 (Non-fraude)       | 2937       | 18 032         | 86.0%     |
+
+- **Rappel pour la classe 1 (Fraude)** : **100 %**
+- **Très faible précision (1 %)** : Le modèle détecte tous les cas de fraude, mais avec beaucoup de faux positifs.
+
+---
+
+## 📝 Interprétation
+
+- Le modèle Arbre de Décision **détecte toutes les fraudes (rappel = 100 %)**, ce qui est crucial en détection de fraude.
+- Cependant, sa **précision est très faible (1 %)**, ce qui signifie qu’il classe à tort de nombreuses transactions normales comme frauduleuses.
+- Cela entraîne un **grand nombre de faux positifs**, pouvant causer des inefficacités opérationnelles ou de la fatigue d’alerte.
+
+👉 Il est recommandé d’explorer des modèles plus avancés (comme LGBM ou Random Forest) ou d’intégrer un apprentissage sensible au coût pour améliorer la précision.
