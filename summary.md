@@ -78,7 +78,6 @@ Voici les performances d'une autre pipeline qui permet d'atteindre un rappel par
 - **Algorithme** : Arbre de Décision (Decision Tree Classifier)
 - **Nombre de caractéristiques** : 76
 - **Instances évaluées** : 21 000
-- **Date de création** : 15/05/2025, 10:14:58
 
 ---
 
