@@ -14,10 +14,10 @@ Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies da
 Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 
 # Résumé des Performances du Modèle LGBM – Détection de Fraude
 
-** Nombre d'instances évaluées** : 21 000  
-** Algorithme utilisé** : LightGBM (LGBMClassifier)  
-** Nombre de caractéristiques** : 46  
-** Colonne cible** : `target` (1 = fraude, 0 = non-fraude)
+**Nombre d'instances évaluées** : 21 000  
+**Algorithme utilisé** : LightGBM (LGBMClassifier)  
+**Nombre de caractéristiques** : 46  
+**Colonne cible** : `target` (1 = fraude, 0 = non-fraude)
 
 ---
 
@@ -28,7 +28,7 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 
 ---
 
-##  Scores d'Évaluation
+## Scores d'Évaluation
 
 | **Métrique**               | **Holdout** | **Validation Croisée** |
 |----------------------------|-------------|-------------------------|
