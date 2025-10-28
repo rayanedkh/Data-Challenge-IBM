@@ -1,34 +1,34 @@
 # HackatonIBM
-## Présentation des jeux de données 📊
+## Présentation des jeux de données 
 
 Pour ce data challenge, nous avons d’abord disposé de trois jeux de données au format CSV :  
 - *cards_data.csv* , regroupant les informations relatives aux cartes (type, date d’émission, limites, etc.)  
 - *users_data.csv* , contenant les attributs des utilisateurs (âge, genre, localisation, statut)  
 - *transactions_train.csv*, listant les opérations effectuées (montant, date, moyen de paiement, marchand)  
 
-Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons donc procédé à leur fusion (merge) sur les clés communes (ID carte et ID utilisateur) afin de constituer un seul jeu de données unifié, prêt pour l’analyse et le prétraitement. 🚀
+Chacun de ces fichiers présentait des colonnes complémentaires ; nous avons donc procédé à leur fusion (merge) sur les clés communes (ID carte et ID utilisateur) afin de constituer un seul jeu de données unifié, prêt pour l’analyse et le prétraitement. 
 
-## Étiquetage de la fraude 🚩
+## Étiquetage de la fraude 
 
-Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* 🗂️.  
-Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 🔍
-# 📊 Résumé des Performances du Modèle LGBM – Détection de Fraude
+Les étiquettes de fraude (fraud/no-fraud) étaient, quant à elles, fournies dans un fichier JSON à part, nommé *train_fraud_labels.json* .  
+Ce fichier associe à chaque identifiant de transaction son label de fraude, nous permettant ainsi de superviser l’apprentissage des modèles de détection. 
+# Résumé des Performances du Modèle LGBM – Détection de Fraude
 
-**🔢 Nombre d'instances évaluées** : 21 000  
-**🧠 Algorithme utilisé** : LightGBM (LGBMClassifier)  
-**🧮 Nombre de caractéristiques** : 46  
-**🎯 Colonne cible** : `target` (1 = fraude, 0 = non-fraude)
-
----
-
-## Feature Engineering 🛠️
-
-- Suppression des colonnes inutiles, telles que **cvv** 🔒 (risque de confidentialité) et autres attributs peu informatifs  
-- Application du **One-Hot Encoding** pour les variables catégorielles, transformant chaque modalité en une colonne binaire distincte 🏷️
+** Nombre d'instances évaluées** : 21 000  
+** Algorithme utilisé** : LightGBM (LGBMClassifier)  
+** Nombre de caractéristiques** : 46  
+** Colonne cible** : `target` (1 = fraude, 0 = non-fraude)
 
 ---
 
-## ✅ Scores d'Évaluation
+## Feature Engineering 
+
+- Suppression des colonnes inutiles, telles que **cvv** (risque de confidentialité) et autres attributs peu informatifs  
+- Application du **One-Hot Encoding** pour les variables catégorielles, transformant chaque modalité en une colonne binaire distincte 
+
+---
+
+##  Scores d'Évaluation
 
 | **Métrique**               | **Holdout** | **Validation Croisée** |
 |----------------------------|-------------|-------------------------|
@@ -42,7 +42,7 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 
 ---
 
-## 📌 Matrice de Confusion
+## Matrice de Confusion
 
 | Observé       | Prédit 1 | Prédit 0 | % Correct |
 |---------------|----------|----------|-----------|
@@ -51,7 +51,7 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 
 ---
 
-## 🧠 Interprétation des Résultats
+## Interprétation des Résultats
 
 - **Précision élevée** : Le modèle atteint une précision de 76.7% pour la classe fraude, ce qui indique une bonne capacité à identifier les transactions frauduleuses.
 - **Rappel solide** : Avec un rappel de 74.2%, le modèle détecte une proportion significative des fraudes réelles.
@@ -60,12 +60,12 @@ Ce fichier associe à chaque identifiant de transaction son label de fraude, nou
 
 ---
 
-## 🛠️ Recommandations
+## Recommandations
 
 - **Analyse des erreurs** : Étudiez les cas de fausses alertes (faux positifs) et de fraudes non détectées (faux négatifs) pour identifier des motifs ou des caractéristiques communes.
 - **Ajustement du seuil de décision** : En fonction de la tolérance au risque, envisagez d'ajuster le seuil de classification pour équilibrer davantage la précision et le rappel.
 - **Surveillance continue** : Mettez en place une surveillance continue des performances du modèle pour détecter toute dérive ou changement dans les données entrantes.
 
 
-📚 Pour en savoir plus :  
-👉 [LightGBM Model evaluation metrics - GeeksforGeeks](https://www.geeksforgeeks.org/lightgbm-model-evaluation-metrics/)
+  
+Réf: [LightGBM Model evaluation metrics - GeeksforGeeks](https://www.geeksforgeeks.org/lightgbm-model-evaluation-metrics/)
